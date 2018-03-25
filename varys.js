@@ -4,7 +4,7 @@ $(function () {
 		// parse responses and log to console
 		if (document.msearch_responses.length > 0) {
 			// parse the last pushed _msearch response
-			var last_response = JSON.parse(document.msearch_responses[document.msearch_responses.length - 1]);
+			var last_response = JSON.parse(document.msearch_responses);
 			var line_responses = [],
 			i = 0;
 			var len = last_response.responses[0].hits.hits.length;
