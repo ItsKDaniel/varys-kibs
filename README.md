@@ -3,3 +3,7 @@ parses last **_\_msearch_** response and logs to console. Console's excellent se
 
 **Future Impl**  
 export and download the response as txt file in addition to logging in console.
+
+**Bookmarklet code**  
+How to implement?  
+// write code here.
