@@ -42,7 +42,7 @@ function init_components() {
 	var add_snackbar = document.createElement('div');
 	add_snackbar.setAttribute('id', 'kibs_snackbar');
 	add_snackbar.innerHTML = 'Logs parsed successfully to Console.';
-	document.body.appendChild(add_snackbar);
+	document.getElementsByClassName('app-wrapper')[0].appendChild(add_snackbar);
 }
 
 function kibs_create_button() {
