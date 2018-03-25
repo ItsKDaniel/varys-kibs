@@ -1,5 +1,5 @@
 $(function () {
-	kibs_create_button();
+	init_components();
 	$('#parse_download').click(function () {
 		// parse responses and log to console
 		if (document.msearch_responses.length > 0) {
@@ -31,13 +31,22 @@ $(function () {
 				console.log(line_responses[lr].line);
 			}
 
-			kibs_toast("kibs_snackbar");
+			kibs_toast("kibs_snackbar")
 		}
 	});
 });
 
+function init_components() {
+	kibs_create_button();
+	//TODO: add code to load snackbar to DOM.
+	var add_snackbar = document.createElement('div');
+	add_snackbar.setAttribute('id', 'kibs_snackbar');
+	add_snackbar.innerHTML = 'Logs parsed successfully to Console.';
+	document.body.appendChild(add_snackbar);
+}
+
 function kibs_create_button() {
-	$('.filter-bar').html($('.filter-bar').html() + '<button id=" parse_download " class=" kuiButton kuiButton--small kuiButton--primary pull - right ">Parse Hei!</button>');
+	$('.filter-bar').html($('.filter-bar').html() + '<button id="parse_download" class="kuiButton kuiButton--small kuiButton--primary pull-right">Parse logs!</button>');
 }
 
 function kibs_toast(toast_id) {
